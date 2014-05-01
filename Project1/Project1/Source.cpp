@@ -12,6 +12,8 @@ int main()
 	bob.setLength(5);
 	bob.printData();
 
+	rectangle reggie(-5, 5);
+	reggie.printData();
 
 	cube tim;
 
@@ -21,8 +23,10 @@ int main()
 
 	tim.printData();
 
-	rectangle reggie(-5, 5);
-	reggie.printData();
+	cube second("Second", 10, 10, 10);
+	second.printData();
+
+	
 
 	//std::cout << "Hello World!!!@!" << std::endl;
 	std::system("pause");

@@ -1,3 +1,5 @@
+#include <string>
+
 #ifndef shapes
 #define shapes
 
@@ -24,6 +26,7 @@ public:
 class cube : public rectangle  //class cube, extends rectangle
 {
 	double height;
+	std::string name;
 
 public:
 	/*
@@ -41,6 +44,7 @@ public:
 	*/
 	cube();
 	cube(double, double, double);
+	cube(std::string, double, double, double);
 	void setHeight(double);
 	double getHeight();
 	void printData();

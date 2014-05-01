@@ -1,5 +1,6 @@
 #include "shapes.h"
 #include <iostream>
+#include <string>
 
 
 
@@ -67,11 +68,13 @@ void rectangle::printData()
 
 cube::cube(){
 	height = 0;
+	name = "Unknown";
 	rectangle();
 }
 
 cube::cube(double l, double w, double h){
 	
+	name = "Unknown";
 	if (h > 0)
 		height = h;
 	else
@@ -79,6 +82,9 @@ cube::cube(double l, double w, double h){
 
 	rectangle(l, w);
 }
+
+cube::cube(std::string name, double h, double l, double w) :name(name), height(h), rectangle(l, w)
+	{ };
 
 void cube::setHeight(double h){
 
@@ -98,7 +104,7 @@ void cube::printData()
 {
 	
 	rectangle::printData();
-	std::cout << "Cube Print Data! " << std::endl;
+	std::cout << "Cube "<<name<<" "<< std::endl;
 	std::cout << "Height: " << getHeight() << std::endl;
 
 }
